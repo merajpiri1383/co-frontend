@@ -8,7 +8,7 @@ import TelegramIcon from "../../assets/icons/footer/telegram.svg";
 import CallIcon from "../../assets/icons/footer/call.svg";
 import PostIcon from "../../assets/icons/footer/post.svg";
 import InamaIcon from "../../assets/icons/footer/inama.svg";
-import LineIcon from "../../assets/icons/line.svg";
+import LineIcon from "../../assets/icons/main/line.svg";
 import CopyrightIcon from "../../assets/icons/footer/copyright.svg";
 
 export default function Footer() {

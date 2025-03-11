@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import MenuBarIcon from "../../assets/icons/MenuBar.svg";
+import MenuBarIcon from "../../assets/icons/header/MenuBar.svg";
 import { Slide } from "react-awesome-reveal";
 
 export default function MenuBar() {

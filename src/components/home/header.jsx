@@ -1,14 +1,14 @@
 import "../../assets/styles/header.css";
-import RegisterIcon from "../../assets/icons/register.svg";
-import RedAccountIcon from "../../assets/icons/redAccount.svg";
-import DiscountIcon from "../../assets/icons/discount.svg";
-import Vector_1 from "../../assets/icons/vector_1.svg";
-import Vector_2 from "../../assets/icons/vector_2.svg";
-import Vector_3 from "../../assets/icons/vector_3.svg";
-import TelegramIcon from "../../assets/icons/telegram.svg";
-import PhoneImage from "../../assets/icons/phone.svg";
-import MedalIcon from "../../assets/icons/medal.svg";
-import MoneyIcon from "../../assets/icons/money.svg";
+import RegisterIcon from "../../assets/icons/header/register.svg";
+import RedAccountIcon from "../../assets/icons/header/redAccount.svg";
+import DiscountIcon from "../../assets/icons/header/discount.svg";
+import Vector_1 from "../../assets/icons/header/vector_1.svg";
+import Vector_2 from "../../assets/icons/header/vector_2.svg";
+import Vector_3 from "../../assets/icons/header/vector_3.svg";
+import TelegramIcon from "../../assets/icons/header/telegram.svg";
+import PhoneImage from "../../assets/icons/header/phone.svg";
+import MedalIcon from "../../assets/icons/header/medal.svg";
+import MoneyIcon from "../../assets/icons/header/money.svg";
 import MenuBar from "./menuBar";
 import Countdown from 'react-countdown';
 
