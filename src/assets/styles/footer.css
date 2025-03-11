@@ -1,0 +1,34 @@
+.footer-search{
+    background-image: url("/src/assets/icons/footer/footer.png");
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    z-index: -20;
+}
+
+.footer-search::after{
+    background-image: linear-gradient(to bottom , #12000088 0% , #120000 100%);
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -10;
+}
+
+.footer {
+    position: relative;
+    z-index: -10;
+}
+
+.footer::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background-image: linear-gradient(to bottom , #120000fb 0% , #120000 100%);
+    z-index: -200;
+}

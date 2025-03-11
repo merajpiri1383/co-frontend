@@ -1,0 +1,34 @@
+.seven-section{
+    background-image: url("../icons/cloud.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.filters{
+    border: 1px solid #FFD9DA;
+    border-radius: 10px;
+    background-image: linear-gradient(to right , #FFFFFF 22% , #FFD9DA 92%);
+}
+
+.active-filter p{
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.active-filter {
+    background-color: #C94040;
+    transition: 300ms;
+}
+
+.plan {
+    border: 1px solid #FFD9DA;
+    background-color: #FFCCCC;
+}
+
+.plan-color {
+    background-color: #F87375;
+}
+
+.rtl {
+    direction: rtl;
+}

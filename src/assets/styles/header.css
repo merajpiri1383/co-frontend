@@ -1,0 +1,23 @@
+.top-header {
+    background-image: linear-gradient(to right,#390505 0% ,#4A0606 58%,#570606 100%);
+}
+
+.header{
+    background-image: linear-gradient(to bottom left,#6E93FE 9% , #C161CF  100%);
+}
+
+.discount-text{
+    text-shadow: 0 0 2px #ff8989ad, 0 0 1px white;
+    background-clip: text;
+    color: transparent;
+}
+
+.telegram-preimum-text{
+    text-shadow: 0 0 2px #4dbcec46 , 0 0 1px white;
+    background-clip: text;
+    color: transparent;
+}
+
+.text-yellow-header_medal {
+    color: #FFB519;
+}
