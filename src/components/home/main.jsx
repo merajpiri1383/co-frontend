@@ -12,9 +12,10 @@ import Image_1 from "../../assets/icons/main/img_1.svg";
 import Image_2 from "../../assets/icons/main/img_2.svg";
 import Image_3 from "../../assets/icons/main/img_3.svg";
 import Image_4 from "../../assets/icons/main/img_4.svg";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
+import axios from "axios";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -24,8 +25,15 @@ export default function Main() {
 
     const [currentFilter, setFilter] = useState("all");
     const swiperRef = useRef();
+    const [plans,setPlans] = useState([]);
 
-    const plans = [1, 2, 3, 4]
+    useEffect(() => {
+        (async () => {
+            const result = await axios.get("https://api.redaccount.ir/services.php").then(
+                (response) => console.log(response.data),
+            )
+        })();
+    },[]);
 
     const filters = [
         {
@@ -37,18 +45,18 @@ export default function Main() {
             text: "یک ماهه",
         },
         {
-            value: "2-month",
-            text: "دو ماهه",
-        },
-        {
             value: "3-month",
             text: "سه ماهه",
+        },
+        {
+            value: "6-month",
+            text: "شش ماهه",
         },
     ]
 
     return (
         <div>
-            <div className="relative flex items-center justify-center">
+            <div className="relative flex items-center justify-center md:hidden">
                 <div className="flex items-center justify-center relative py-12 w-full my-6 mx-3">
                     <img src={CloudIcon} className="absolute" />
                     <p style={{ color: "#CB504E" }} className="text-lg">روز ضمانت باز گشت وجه</p>
@@ -56,7 +64,7 @@ export default function Main() {
                 </div>
             </div>
 
-            <div className="m-3 flex items-center justify-center">
+            <div className="m-3 md:my-6 flex items-center justify-center">
                 <div className="w-full flex items-center justify-center">
                     <div className="grid filters grid-cols-4 p-2 gap-4 items-center justify-center">
                         {
@@ -67,7 +75,8 @@ export default function Main() {
                                         key={index}
                                         onClick={() => setFilter(filter.value)}>
                                         <div key={index} className={`w-fit p-1 py-2 text-xs text-center
-                                        rounded-lg ${currentFilter === filter.value && "active-filter"}`}>
+                                        rounded-lg ${currentFilter === filter.value && "active-filter"}
+                                        md:text-lg`}>
                                             <p>{filter.text}</p>
                                         </div>
                                     </div>
@@ -78,7 +87,7 @@ export default function Main() {
                 </div>
             </div>
 
-            <div className="flex items-center jusitfy-between gap-4 w-full">
+            <div className="flex items-center jusitfy-between gap-4 w-full md:hidden">
                 <img
                     src={leftArrowIcon}
                     className="h-6 ml-2 cursor-pointer"
@@ -108,6 +117,28 @@ export default function Main() {
                     className="h-6 mr-2 cursor-pointer"
                     onClick={() => swiperRef.current?.slideNext()}
                 />
+            </div>
+
+            <div className="md:block px-6 w-full hidden">
+                <Swiper
+                    modules={[Navigation, Pagination, A11y]}
+                    spaceBetween={30}
+                    slidesPerView={3}
+                    navigation
+                    pagination={{ clickable: true }}
+                    scrollbar={{ draggable: true }}
+                    onSwiper={(swiper) => { swiperRef.current = swiper }}
+                >
+                    {
+                        plans.map((item, index) => {
+                            return (
+                                <SwiperSlide key={index}>
+                                    <Plan item={item} />
+                                </SwiperSlide>
+                            )
+                        })
+                    }
+                </Swiper>
             </div>
 
             <div className="flex items-center justify-center my-6 gap-4">
