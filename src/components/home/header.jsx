@@ -16,10 +16,6 @@ import MoneyIcon from "../../assets/icons/header/money.svg";
 import PawelIcon from "../../assets/icons/header/pawel.svg";
 import MenuBar from "./menuBar";
 import Countdown from 'react-countdown';
-import StoreIcon from "../../assets/icons/header/store.svg";
-import ProductsIcon from "../../assets/icons/header/products.svg";
-import BookIcon from "../../assets/icons/header/book.svg";
-import CallIcon from "../../assets/icons/header/call.svg";
 import RegisterRedAccountIcon from "../../assets/icons/header/registerRedAccount.svg";
 
 export default function () {
@@ -107,19 +103,15 @@ export default function () {
                     <div className="col-span-4 grid-cols-4 grid">
                         <div className="col-span-1 flex items-center justify-center px-4 gap-2 text-white">
                             <p className="text-lg">فروشگاه</p>
-                            <img src={StoreIcon} className="size-6" />
                         </div>
                         <div className="col-span-1 flex items-center justify-center px-4 gap-4 text-white">
                             <p className="text-lg">محصولات</p>
-                            <img src={ProductsIcon} className="size-6" />
                         </div>
                         <div className="col-span-1 flex items-center justify-center px-4 gap-4 text-white">
                             <p className="text-lg">پشتیبانی</p>
-                            <img src={CallIcon} className="size-6" />
                         </div>
                         <div className="col-span-1 flex items-center justify-center px-4 gap-4 text-white">
                             <p className="text-lg">بلاگ</p>
-                            <img src={BookIcon} className="size-6" />
                         </div>
                     </div>
                     <div className="col-span-2 flex items-center justify-center">

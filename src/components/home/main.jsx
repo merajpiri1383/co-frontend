@@ -26,11 +26,18 @@ export default function Main() {
     const [currentFilter, setFilter] = useState("all");
     const swiperRef = useRef();
     const [plans,setPlans] = useState([]);
+    const [result,setResult] = useState([]);
+
+    useEffect(() => {
+        currentFilter === "all" ? 
+        setPlans(result) : 
+        setPlans(result.filter((item) => item.duration === currentFilter))
+    },[result,currentFilter])
 
     useEffect(() => {
         (async () => {
             const result = await axios.get("https://api.redaccount.ir/services.php").then(
-                (response) => console.log(response.data),
+                (response) => setResult(response.data),
             )
         })();
     },[]);
@@ -41,16 +48,16 @@ export default function Main() {
             text: "همه",
         },
         {
-            value: "1-month",
-            text: "یک ماهه",
+            value: "30",
+            text: "سه ماهه ",
         },
         {
-            value: "3-month",
-            text: "سه ماهه",
+            value: "180",
+            text: "شش ماهه ",
         },
         {
-            value: "6-month",
-            text: "شش ماهه",
+            value: "365",
+            text: "شش ساله ",
         },
     ]
 
@@ -127,7 +134,6 @@ export default function Main() {
                     navigation
                     pagination={{ clickable: true }}
                     scrollbar={{ draggable: true }}
-                    onSwiper={(swiper) => { swiperRef.current = swiper }}
                 >
                     {
                         plans.map((item, index) => {
@@ -141,14 +147,14 @@ export default function Main() {
                 </Swiper>
             </div>
 
-            <div className="flex items-center justify-center my-6 gap-4">
+            <div className="flex items-center justify-center my-6 gap-4 md:hidden">
                 <p className="text-xl" style={{ color: "#CB504E" }}>قابل تحویل در ۳۰ دقیقه</p>
                 <img src={TruckIcon} className="size-10" />
             </div>
 
             <img src={LineIcon} className="w-full my-4" />
 
-            <div className="my-4 grid grid-cols-5 items-center">
+            <div className="my-4 grid grid-cols-5 items-center md:hidden">
                 <div className="col-span-1 flex items-center justify-end">
                     <img src={DuckIcon} className="size-12" />
                 </div>
