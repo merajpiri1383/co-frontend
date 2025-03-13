@@ -4,7 +4,11 @@ import TruckIcon from "../../assets/icons/main/truck.svg";
 import StoreIcon from "../../assets/icons/main/store.svg";
 
 export default function Plan({ item }) {
-    console.log(item);
+
+    const clickHandler = () => {
+        window.location.href = "https://redaccount.ir/payment/payment/?source=redaccount&service_id=" + item.id
+    };
+
     return (
         <>
             <div className="w-full plan rounded-xl mb-9 md:hidden">
@@ -20,7 +24,7 @@ export default function Plan({ item }) {
                 </div>
 
                 <div className="plan-color text-center rounded-es-xl rounded-ee-xl text-white p-1
-            cursor-pointer">خرید مستقیم</div>
+            cursor-pointer" onClick={() => clickHandler()}>خرید مستقیم</div>
             </div>
 
             <div className="hidden md:block w-full mb-9">
@@ -58,7 +62,7 @@ export default function Plan({ item }) {
                     </div>
                 </div>
                 <div className="plan-color flex items-center justify-center gap-2 p-2 my-2 rounded-b-xl
-                cursor-pointer">
+                cursor-pointer" onClick={() => clickHandler()}>
                     <p className="text-white">بریم خرید</p>
                     <img src={StoreIcon} />
                 </div>

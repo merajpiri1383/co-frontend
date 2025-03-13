@@ -10,28 +10,40 @@ import PostIcon from "../../assets/icons/footer/post.svg";
 import InamaIcon from "../../assets/icons/footer/inama.svg";
 import LineIcon from "../../assets/icons/main/line.svg";
 import CopyrightIcon from "../../assets/icons/footer/copyright.svg";
+import ManIcon from "../../assets/icons/footer/man.svg";
+
+
+const SearchBox = () => {
+    return (
+        <div className=" flex items-center justify-center bg-white rounded-xl">
+            <div className=" w-full flex items-center justify-center p-2">
+                <button className="bg-slate-950 text-white p-1 px-4 rounded-lg mr-4">ثبت</button>
+                <input
+                    type="text"
+                    placeholder="example@gmail.com"
+                    className="w-full outline-none border-r text-gray-400 text-sm"
+                />
+                <img src={SmsIcon} className="h-full mx-2" />
+            </div>
+        </div>
+    )
+}
 
 export default function Footer() {
     return (
         <div className="footer">
-            <div className="footer-search py-2 ">
-                <div className="m-4 flex items-center jusitfy-center z-20">
+            <div className="footer-search py-2 md:hidden">
+                <div className="m-4 flex items-center jusitfy-center z-20 ">
                     <div className="w-full flex items-center justify-center">
                         <p className="text-white text-lg rtl">نیاز به راهنمایی و مشاوره داری؟</p>
                         <img src={WifiIcon} className="size-8" />
                     </div>
                 </div>
-                <div className="m-4 my-6 flex items-center justify-center bg-white rounded-xl">
-                    <div className=" w-full flex items-center justify-center p-2">
-                        <button className="bg-slate-950 text-white p-1 px-4 rounded-lg mr-4">ثبت</button>
-                        <input
-                            type="text"
-                            placeholder="example@gmail.com"
-                            className="w-full outline-none border-r text-gray-400 text-sm"
-                        />
-                        <img src={SmsIcon} className="h-full mx-2" />
-                    </div>
+
+                <div className="m-4 my-6">
+                    <SearchBox />
                 </div>
+
 
                 <div className="m-2 my-6 items-center justify-center ">
                     <div className="grid grid-cols-5 text-xs gap-2 items-center">
@@ -52,6 +64,22 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+
+            <div className="footer-search hidden md:flex items-center justify-center">
+                <div className="grid grid-cols-10 w-96 mt-48 mb-12">
+                    <div className="col-span-1 flex items-center justify-center">
+                        <img src={ManIcon} />
+                    </div>
+                    <div className="col-span-8">
+                        <p className="text-white text-2xl rtl my-2">نیاز به راهنمایی و مشاوره داری؟</p>
+                        <SearchBox />
+                    </div>
+                    <div className="col-span-1">
+                        <img src={WifiIcon} />
+                    </div>
+                </div>
+            </div>
+
             <div className="grid grid-cols-3 items-center">
                 <div className="col-span-1 p-4">
                     <img src={LinkedinIcon} className="size-10" />

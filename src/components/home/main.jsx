@@ -25,14 +25,14 @@ export default function Main() {
 
     const [currentFilter, setFilter] = useState("all");
     const swiperRef = useRef();
-    const [plans,setPlans] = useState([]);
-    const [result,setResult] = useState([]);
+    const [plans, setPlans] = useState([]);
+    const [result, setResult] = useState([]);
 
     useEffect(() => {
-        currentFilter === "all" ? 
-        setPlans(result) : 
-        setPlans(result.filter((item) => item.duration === currentFilter))
-    },[result,currentFilter])
+        currentFilter === "all" ?
+            setPlans(result) :
+            setPlans(result.filter((item) => item.duration === currentFilter))
+    }, [result, currentFilter])
 
     useEffect(() => {
         (async () => {
@@ -40,7 +40,7 @@ export default function Main() {
                 (response) => setResult(response.data),
             )
         })();
-    },[]);
+    }, []);
 
     const filters = [
         {
@@ -152,7 +152,27 @@ export default function Main() {
                 <img src={TruckIcon} className="size-10" />
             </div>
 
-            <img src={LineIcon} className="w-full my-4" />
+            <img src={LineIcon} className="w-full my-4 md:hidden" />
+
+            <div className="hidden md:grid grid-cols-5 gap-6 my-12 px-12">
+                <div className="col-span-4 rtl">
+                    <p className="text-xl my-2 rtl" style={{ color: "#7A0101" }}>
+                        نکاتی که باید در هنگام خرید توجه کنید...!
+                    </p>
+                    <p className="text-lg text-gray-400">مطالعه و رعایت نکات ذکر شده در این بخش قبل از ثبت
+                        سفارش الزامی می‌باشد و در صورت رعایت نکردن موارد ذکر شده، </p>
+                    <p className="text-lg text-gray-400">ضمانت باطل می‌گردد.</p>
+                    <p className="text-lg text-gray-400">امنیت: هنگام خرید اکانت از یک سایت، به اعتبار و
+                        امنیت آن سایت اطمینان حاصل کنید.</p>
+                    <p className="text-lg text-gray-400">گارانتی: از سایتی خرید کنید که گارانتی تعویض اکانت
+                         در صورت بروز مشکل را ارائه دهد.</p>
+                    <p className="text-lg text-gray-400">قوانین دولینگو: از قوانین دولینگو در مورد اشتراک‌گذاری 
+                        اکانت آگاه باشید.</p>
+                </div>
+                <div className="col-span-1 flex items-center justify-center">
+                    <img src={WonderIcon} className="size-36" />
+                </div>
+            </div>
 
             <div className="my-4 grid grid-cols-5 items-center md:hidden">
                 <div className="col-span-1 flex items-center justify-end">
@@ -167,7 +187,7 @@ export default function Main() {
             </div>
 
             <div style={{ backgroundColor: "#FFF2F2" }}
-                className="flex items-center justify-center rounded-xl m-4">
+                className="flex items-center justify-center rounded-xl m-4 md:hidden">
                 <div className="flex items-center justify-center my-4 gap-2">
                     <div className="rtl">
                         <p className="text-xs" style={{ color: "#8F0606" }}>لطفا پیش از ثبت سفارش، بخش</p>
@@ -178,7 +198,7 @@ export default function Main() {
                 </div>
             </div>
 
-            <div className="m-4 flex items-center justify-center">
+            <div className="m-4 flex items-center justify-center md:hidden">
                 <div className="flex items-center justify-between gap-2">
                     <img src={WonderIcon} className="size-10" />
                     <p className="text-sm rtl" style={{ color: "#7A0101" }}>
@@ -213,37 +233,37 @@ export default function Main() {
 
             <div className="my-4 hidden md:block"></div>
 
-            <div className="m-4 flex items-center justify-center">
-                <div className="grid grid-cols-2 md:grid-cols-4 md:gap-12 items-center gap-4">
+            <div className="m-4 flex items-center justify-center md:px-20">
+                <div className="grid w-full grid-cols-2 md:grid-cols-4 md:gap-12 items-center gap-4">
                     <div className="col-span-1">
-                        <div>
-                            <img src={Image_1} className="size-16 mx-auto" />
+                        <div className="md:my-4">
+                            <img src={Image_1} className="size-16 md:size-24 mx-auto" />
                         </div>
-                        <p className="text-center" style={{ color: "#4B2626" }}>
+                        <p className="text-center text-xs md:text-lg" style={{ color: "#4B2626" }}>
                             پشتیبانی کامل
                         </p>
                     </div>
                     <div className="col-span-1">
-                        <div>
-                            <img src={Image_2} className="size-16 mx-auto" />
+                        <div className="md:my-4">
+                            <img src={Image_2} className="size-16 md:size-24 mx-auto" />
                         </div>
-                        <p className="text-center" style={{ color: "#4B2626" }}>
+                        <p className="text-center text-xs md:text-lg" style={{ color: "#4B2626" }}>
                             قیمت رقابتی
                         </p>
                     </div>
                     <div className="col-span-1">
-                        <div>
-                            <img src={Image_3} className="size-16 mx-auto" />
+                        <div className="md:my-4">
+                            <img src={Image_3} className="size-16 md:size-24 mx-auto" />
                         </div>
-                        <p className="text-center" style={{ color: "#4B2626" }}>
+                        <p className="text-center text-xs md:text-lg" style={{ color: "#4B2626" }}>
                             ثبت سفارش سریع
                         </p>
                     </div>
                     <div className="col-span-1">
-                        <div>
-                            <img src={Image_4} className="size-16 mx-auto" />
+                        <div className="md:my-4">
+                            <img src={Image_4} className="size-16 md:size-24 mx-auto" />
                         </div>
-                        <p className="text-center" style={{ color: "#4B2626" }}>
+                        <p className="text-center text-xs md:text-lg" style={{ color: "#4B2626" }}>
                             ضمانت بازگشت وجه
                         </p>
                     </div>
