@@ -84,7 +84,10 @@ export default function Footer() {
                 <div className="col-span-1 p-4">
                     <img src={LinkedinIcon} className="size-10" />
                     <img src={InstaIcon} className="size-10" />
-                    <img src={TelegramIcon} className="size-10" />
+                    <a href="https://t.me/redaccountt">
+                        <img src={TelegramIcon} className="size-10 cursor-pointer" />
+                    </a>
+
                 </div>
                 <div className="col-span-1 p-2">
                     <p className="text-white text-sm text-right">محبوب‌ترین ها</p>

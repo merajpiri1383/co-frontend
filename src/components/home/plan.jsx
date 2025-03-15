@@ -14,13 +14,16 @@ export default function Plan({ item }) {
             <div className="w-full plan rounded-xl mb-9 md:hidden">
                 <div className="flex items-center justify-between">
                     <p className="p-2 plan-color text-white rounded-ss-xl rounded-ee-xl">گیفت</p>
-                    <p className="line-through text-sm text-gray-400">{item.original_price}</p>
+                    <p className="line-through text-sm text-gray-400">
+                        {Number(item.original_price).toLocaleString()}
+                    </p>
                     <p className="p-2 plan-color text-white rounded-es-xl rounded-se-xl">
                         {item.title_fa}
                     </p>
                 </div>
                 <div className="flex items-center justify-center p-4">
-                    <p className="text-xl font-bold rtl text-gray-800">9000 تومان</p>
+                    <p className="text-xl font-bold rtl text-gray-800">
+                        {Number(item.cost).toLocaleString()} تومان</p>
                 </div>
 
                 <div className="plan-color text-center rounded-es-xl rounded-ee-xl text-white p-1
@@ -45,10 +48,13 @@ export default function Plan({ item }) {
                     </div>
                     <div className="flex items-center justify-center px-12 gap-3">
                         <img src={DiscountIcon} className="size-16" />
-                        <p className="line-through text-lg text-gray-400">{item.original_price}</p>
+                        <p className="line-through text-lg text-gray-400">
+                            {Number(item.original_price).toLocaleString()}
+                        </p>
                     </div>
                     <div className="flex items-center justify-center px-12 gap-3">
-                        <p className="rtl text-2xl font-semibold">{item.cost} تومان</p>
+                        <p className="rtl text-2xl font-semibold">
+                            {Number(item.cost).toLocaleString()} تومان</p>
                     </div>
                     <div className="flex items-center justify-center my-3 gap-4">
                         <p className="text-lg" style={{ color: "#CB504E" }}>قابل تحویل در ۳۰ دقیقه</p>

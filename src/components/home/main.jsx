@@ -57,7 +57,7 @@ export default function Main() {
         },
         {
             value: "365",
-            text: "شش ساله ",
+            text: "یک ساله ",
         },
     ]
 
