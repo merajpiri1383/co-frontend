@@ -8,4 +8,9 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  resolve: {
+    alias: {
+      '@mohsen007/react-goftino': '/node_modules/@mohsen007/react-goftino/dist/index.js'
+    }
+  }
 })

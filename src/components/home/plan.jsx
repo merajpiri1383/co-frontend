@@ -61,7 +61,7 @@ export default function Plan({ item }) {
                         <img src={TruckIcon} className="size-8" />
                     </div>
                     <div className="col-span-4 rtl px-10 pb-9">
-                        <p className="text-sm text-gray-800">🔹 بدون نیاز به تغییر شماره.</p>
+                        <p className="text-sm text-gray-800">🔹 بدون نیاز به دسترسی.</p>
                         <p className="text-sm text-gray-800">🔹 فعالسازی روی اکانت شخصی شما</p>
                         <p className="text-sm text-gray-800">🔹 قابل تمدید، قانونی، کاملا امن و تضمین شده</p>
                         <p className="text-sm text-gray-800">🔹 بعد از سفارش اشتراک برای شما گیفت خواهد شد</p>

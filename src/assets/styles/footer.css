@@ -3,8 +3,9 @@
     background-size: cover;
     background-position: center;
     object-fit: cover;
+    object-position: center;
     position: relative;
-    z-index: -20;
+    z-index: 20;
 }
 
 .footer-search::after{
@@ -15,7 +16,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: -10;
+    z-index: -30;
 }
 
 .footer {

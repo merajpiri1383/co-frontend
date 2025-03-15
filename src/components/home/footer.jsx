@@ -14,8 +14,13 @@ import ManIcon from "../../assets/icons/footer/man.svg";
 
 
 const SearchBox = () => {
+
+    const clickHandler = () => {
+        window.Goftino.open();
+    }
+
     return (
-        <div className=" flex items-center justify-center bg-white rounded-xl">
+        <div className="flex items-center justify-center bg-white z-50 rounded-xl" onClick={clickHandler}>
             <div className=" w-full flex items-center justify-center p-2">
                 <button className="bg-slate-950 text-white p-1 px-4 rounded-lg mr-4">ثبت</button>
                 <input
@@ -80,7 +85,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-3 items-center">
+            <div className="grid grid-cols-3 items-center md:hidden">
                 <div className="col-span-1 p-4">
                     <img src={LinkedinIcon} className="size-10" />
                     <img src={InstaIcon} className="size-10" />
@@ -109,7 +114,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="flex items-center justify-between mx-4">
+            <div className="flex items-center justify-between mx-4 md:hidden">
                 <img src={InamaIcon} className="size-16" />
                 <div className="text-white text-xs">
                     <div className="flex items-center jusitfy-center rtl gap-2 my-2">
@@ -121,6 +126,73 @@ export default function Footer() {
                         <div>
                             <p>آدرس استان گلستان، شهرستان گرگان</p>
                             <p>میدان باهنر، هلدینگ متزون</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="hidden md:grid grid-cols-2">
+                <div className="col-span-1 grid grid-cols-3 items-center justify-center">
+                    <div className="col-span-1">
+                        <div className="flex items-start justify-center">
+                            <img src={InamaIcon} className="size-24" />
+                        </div>
+                        <div className="flex items-center justify-center gap-2 mt-5">
+                            <img src={LinkedinIcon} className="size-8" />
+                            <img src={InstaIcon} className="size-8" />
+                            <a href="https://t.me/redaccountt">
+                                <img src={TelegramIcon} className="size-8 cursor-pointer" />
+                            </a>
+                        </div>
+                    </div>
+                    <div className="col-span-1 p-2 rtl">
+                        <p className="text-white text-sm text-right">دسترسی سریع</p>
+                        <div className="grid grid-cols-1 border-t-2 w-fit border-white px-4 gap-2 py-2 my-2">
+                            <p className="text-xs text-white col-span-1 text-right">لینک</p>
+                            <p className="text-xs text-white col-span-1 text-right">لینک</p>
+                            <p className="text-xs text-white col-span-1 text-right">لینک</p>
+                            <p className="text-xs text-white col-span-1 text-right">لینک</p>
+                        </div>
+                    </div>
+                    <div className="col-span-1 p-2 rtl">
+                        <p className="text-white text-sm text-right">دسترسی سریع</p>
+                        <div className="grid grid-cols-1 border-t-2 border-white gap-2 px-4 w-fit py-2 my-2">
+                            <p className="text-xs text-white col-span-1 text-right">لینک</p>
+                            <p className="text-xs text-white col-span-1 text-right">لینک</p>
+                            <p className="text-xs text-white col-span-1 text-right">لینک</p>
+                            <p className="text-xs text-white col-span-1 text-right">لینک</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-span-1">
+                    <div className="m-2 my-6 items-center justify-center ">
+                        <div className="grid grid-cols-5 text-xs gap-2 items-center">
+                            <div className="col-span-4 rtl" style={{ color: "#A5A0A0" }}>
+                                <p>
+                                    <span className="font-bold"
+                                        style={{ color: "#FF4F4F" }}>درباره Red Account </span>
+                                    <span>اکانت های پریمیوم شبکه </span>
+                                </p>
+                                <p>های اجتماعی را کاملا قانونی و با ضمانت خرید کنید. </p>
+                                <p>در کمترین زمان ممکن با بهترین پشتیبانی و خدمات</p>
+                                <p>پس از فروش.</p>
+                            </div>
+                            <div className="col-span-1">
+                                <img src={RedAccountIcon} className="w-auto h-auto" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="text-white text-xs px-12">
+                        <div className="flex items-center jusitfy-center rtl gap-2 my-2">
+                            <img src={CallIcon} className="size-5" />
+                            <p>شماره تماس ۳۲۵۴۴۵۶۷-۰۱۷ </p>
+                        </div>
+                        <div className="flex items-center jusitfy-center rtl gap-2 my-2">
+                            <img src={PostIcon} className="size-5" />
+                            <div>
+                                <p>آدرس استان گلستان، شهرستان گرگان</p>
+                                <p>میدان باهنر، هلدینگ متزون</p>
+                            </div>
                         </div>
                     </div>
                 </div>

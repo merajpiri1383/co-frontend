@@ -105,6 +105,7 @@ export default function Main() {
                     spaceBetween={10}
                     slidesPerView={1}
                     navigation
+                    dir="rtl"
                     pagination={{ clickable: true }}
                     scrollbar={{ draggable: true }}
                     onSwiper={(swiper) => { swiperRef.current = swiper }}
@@ -165,8 +166,8 @@ export default function Main() {
                     <p className="text-lg text-gray-400">امنیت: هنگام خرید اکانت از یک سایت، به اعتبار و
                         امنیت آن سایت اطمینان حاصل کنید.</p>
                     <p className="text-lg text-gray-400">گارانتی: از سایتی خرید کنید که گارانتی تعویض اکانت
-                         در صورت بروز مشکل را ارائه دهد.</p>
-                    <p className="text-lg text-gray-400">قوانین دولینگو: از قوانین دولینگو در مورد اشتراک‌گذاری 
+                        در صورت بروز مشکل را ارائه دهد.</p>
+                    <p className="text-lg text-gray-400">قوانین دولینگو: از قوانین دولینگو در مورد اشتراک‌گذاری
                         اکانت آگاه باشید.</p>
                 </div>
                 <div className="col-span-1 flex items-center justify-center">
@@ -179,7 +180,7 @@ export default function Main() {
                     <img src={DuckIcon} className="size-12" />
                 </div>
                 <div className="col-span-4 rtl">
-                    <p className="text-xs text-gray-800">🔹 بدون نیاز به تغییر شماره.</p>
+                    <p className="text-xs text-gray-800">🔹 بدون نیاز به دسترسی.</p>
                     <p className="text-xs text-gray-800">🔹 فعالسازی روی اکانت شخصی شما</p>
                     <p className="text-xs text-gray-800">🔹 قابل تمدید، قانونی، کاملا امن و تضمین شده</p>
                     <p className="text-xs text-gray-800">🔹 بعد از سفارش اشتراک برای شما گیفت خواهد شد</p>

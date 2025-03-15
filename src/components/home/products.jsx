@@ -36,6 +36,7 @@ export default function Products() {
                     spaceBetween={10}
                     slidesPerView={1.4}
                     navigation
+                    dir='rtl'
                     pagination={{ clickable: true }}
                 >
                     {
@@ -73,6 +74,7 @@ export default function Products() {
                         spaceBetween={10}
                         slidesPerView={3}
                         navigation
+                        dir='rtl'
                         pagination={{ clickable: true }}
                     >
                         {
